@@ -3,6 +3,20 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import CurrencyExchange from './currency-exchange.js';
+import Codes from './codes.js';
+
+Codes.getCodes()
+.then(function(response)  {
+  listCodes(response)
+})
+function listCodes(response) { 
+  $('#target').append($(`<option value="${response.supported_codes[[0]]}>${response.supported_codes[[1]]}</option>`));
+}
+//Probably needs a loop of some sort
+
+  // .val(response.supported_codes[[0]]).html(response.supported_codes[[1]]));
+  // console.log("The codes came through")
+
 
 function getElements(response) {
   let code = $('#code').val();

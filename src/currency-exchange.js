@@ -1,4 +1,4 @@
-export default class CurrencyExchange {
+export class CurrencyExchange {
   static getRates(code, target, amount) {
     return fetch(`https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/pair/${code}/${target}/${amount}`)
       .then(function (response) {
