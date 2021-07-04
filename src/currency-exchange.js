@@ -8,10 +8,10 @@ export default class CurrencyExchange {
         // }
         return response.json();
       })
-      .catch(function (error) {
-        console.log("This is a 404")
+      // .catch(function (error) {
+      //   console.log("This is a 404")
         
-        return error;
-      });
+      //   return error;
+      // });
   }
 }
