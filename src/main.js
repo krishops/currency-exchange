@@ -13,14 +13,18 @@ $(document).ready(function () {
 
     CurrencyExchange.getRates(target, amount)
       .then(function (response) {
-        console.log("THIS IS WORKING");
         getElements(response);
       });
   });
 });
 
 function getElements(response) {
-  if (response.result === "success")
-    return response.conversion_rate;
-  console.log("THIS WAS A GOOD FUNCITON" + response.conversion_rate);
+  let target = $('#targetCurrency').val();
+  let amount = $('#amount').val();
+  if (response.result === "success") {
+    $('.showAmount').text(`$${amount} is ${response.conversion_result} in ${target}`);
+  } else {
+    $('.showError').text(`This is an invalid search: ${response.statusText}`);
+    $('.showError').text(`${target} is not a valid currency`);
+  }
 }
