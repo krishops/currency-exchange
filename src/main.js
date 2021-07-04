@@ -11,8 +11,8 @@ function getElements(response) {
   if (response.result === "success") {
     $('.showAmount').text(`${amount} ${code} is ${response.conversion_result} ${target}`);
     
-  // } else if (response.result === "error" && response.error-type === "unsupported_code")  {
-  //   $('.showError').text(`${target} is an unsupported currency code, or the currency does not exist.`)
+  } else if (response.result === "error" && response["error-type"] === "unsupported_code")  {
+    $('.showError').text(`${target} is an unsupported currency code, or the currency does not exist.`)
   } 
   
   else {
