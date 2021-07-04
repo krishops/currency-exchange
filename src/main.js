@@ -8,17 +8,17 @@ function getElements(response) {
   let code = $('#code').val();
   let target = $('#target').val();
   let amount = $('#amount').val();
+
   if (response.result === "success") {
-    $('.showAmount').text(`${amount} ${code} is ${response.conversion_result} ${target}`);
-    
+    $('#showAmount').text(`${amount} ${code} is ${response.conversion_result} ${target}`);   
   } else if (response["error-type"] === "unsupported-code")  {
-    $('.showError').text(`${target} is an unsupported currency code, or the currency does not exist.`)
+    $('#showError').text(`${target} is an unsupported currency code, or the currency does not exist.`);
   } else {
-    $('.showError').text(`This is an invalid search: ${response.message}`);
+    $('#showError').text(`This is an invalid search: ${response.message}`);
   }
+  
   $('form#currencyEx').trigger("reset");
 }
-
 
 $(document).ready(function () {
   $('form#currencyEx').submit(function () {
@@ -26,17 +26,12 @@ $(document).ready(function () {
     let code = $('#code').val();
     let target = $('#target').val();
     let amount = $('#amount').val();
+    $('#results').show();
 
     CurrencyExchange.getRates(code, target, amount)
       .then(function (response) {
-        console.log("move into getElements")
         getElements(response);
-      })
-      // .catch(function()  {
-      //   console.log("This is a 404")
-      // })
-      
-
+      });
   });
 });
 

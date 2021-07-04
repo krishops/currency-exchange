@@ -1,39 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Currency Exchange</title>
 </head>
+
 <body>
   <div class="container">
-    <div class="row">
-      
-      <div clas></div>
     <h2>Currency Exchange</h2>
-    <form id="currencyEx">
-      <label for="amount">Amount in USD</label>
-      <input type="text" id="amount">
-      <select class="form-control" id="code">
-        <option value="  "></option>
-        <option value="USD">U.S. Dollar</option>
-        <option value="EUR">E.U. Euro</option>
-        <option value="CAD">Canadian Dollar</option>
-        <option value="RUB">Russian Ruble</option>
-        <option value="JPY">Japanese Yen</option>
-        <option value="MXN">Mexican Peso</option>
-      </select>
-      <select class="form-control" id="target">
-        <option value="  "></option>
-        <option value="USD">U.S. Dollar</option>
-        <option value="EUR">E.U. Euro</option>
-        <option value="CAD">Canadian Dollar</option>
-        <option value="RUB">Russian Ruble</option>
-        <option value="JPY">Japanese Yen</option>
-        <option value="MXN">Mexican Peso</option>
-      </select>
-      <button class="btn btn-primary" id="getConversion">Submit</button>
-      <div class="showAmount"></div>
-      <div class="showError"></div>
-    </form>
+    <div class="row">
+      <div class="card">
+        <form id="currencyEx">
+          <div class="form-group">
+            <label for="amount">Amount:</label>
+            <input type="text" id="amount">
+          </div>
+          <div class="form-group">
+            <div class="col-md-4">
+              <label for="code">Your currency:</label>
+              <select class="form-control" id="code">
+
+                <option value="  "></option>
+                <option value="USD">U.S. Dollar</option>
+                <option value="EUR">E.U. Euro</option>
+                <option value="CAD">Canadian Dollar</option>
+                <option value="RUB">Russian Ruble</option>
+                <option value="JPY">Japanese Yen</option>
+                <option value="MXN">Mexican Peso</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-md-4">
+              <label for="target">Convert to:</label>
+              <select class="form-control" id="target">
+                <option value="  "></option>
+                <option value="USD">U.S. Dollar</option>
+                <option value="EUR">E.U. Euro</option>
+                <option value="CAD">Canadian Dollar</option>
+                <option value="RUB">Russian Ruble</option>
+                <option value="JPY">Japanese Yen</option>
+                <option value="MXN">Mexican Peso</option>
+              </select>
+            </div>
+          </div>
+          <button class="btn btn-primary" id="getConversion">Submit</button>
+        </form>
+      </div>
+    </div>
+    <hr>
+    <div class="card" id="results">
+      <h5 class="card-header">Results</h5>
+      <div class="col-md-4">
+      <div class="showAmount">
+        <span id="showAmount"></span>
+      </div>
+    <div class="showError">
+      <span id="showError"></span>
+    </div>
   </div>
+</div>
+  
+
+
 </body>
+
 </html>
