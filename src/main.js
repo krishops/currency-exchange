@@ -22,7 +22,6 @@ function getElements(response) {
     $('#error').show();
     $('#results').hide();
   }
-
   $('form#currencyEx').trigger("reset");
 }
 
