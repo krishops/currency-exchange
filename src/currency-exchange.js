@@ -4,7 +4,7 @@ export default class CurrencyExchange {
       .then(function (response) {
         console.log(response);
         if (!response.ok) {
-          throw Error(response.statusText);
+          throw Error(response.status);
         }
         return response.json();
       })
