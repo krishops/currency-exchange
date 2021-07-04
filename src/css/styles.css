@@ -1,6 +1,7 @@
 h2  {
   padding-bottom: 20px;
 }
+
 .form-group {
   padding-bottom: 20px;
 }
@@ -10,5 +11,9 @@ h2  {
 }
 
 #results  {
+  display: none;
+}
+
+#error  {
   display: none;
 }

@@ -9,17 +9,16 @@
   <div class="container">
     <h2>Currency Exchange</h2>
     <div class="row">
-      <div class="card">
-        <form id="currencyEx">
-          <div class="form-group">
-            <label for="amount">Amount:</label>
-            <input type="text" id="amount">
-          </div>
-          <div class="form-group">
-            <div class="col-md-4">
+      <div class="col-md-5">
+        <div class="card">
+          <form id="currencyEx">
+            <div class="form-group">
+              <label for="amount">Amount:</label>
+              <input type="text" id="amount">
+            </div>
+            <div class="form-group">
               <label for="code">Your currency:</label>
               <select class="form-control" id="code">
-
                 <option value="  "></option>
                 <option value="USD">U.S. Dollar</option>
                 <option value="EUR">E.U. Euro</option>
@@ -29,9 +28,7 @@
                 <option value="MXN">Mexican Peso</option>
               </select>
             </div>
-          </div>
-          <div class="form-group">
-            <div class="col-md-4">
+            <div class="form-group">
               <label for="target">Convert to:</label>
               <select class="form-control" id="target">
                 <option value="  "></option>
@@ -43,26 +40,23 @@
                 <option value="MXN">Mexican Peso</option>
               </select>
             </div>
-          </div>
-          <button class="btn btn-primary" id="getConversion">Submit</button>
-        </form>
+            <button class="btn btn-primary" id="getConversion">Submit</button>
+          </form>
+        </div>
       </div>
-    </div>
-    <hr>
-    <div class="card" id="results">
-      <h5 class="card-header">Results</h5>
-      <div class="col-md-4">
-      <div class="showAmount">
-        <span id="showAmount"></span>
+      <div class="col-md-5">
+        <div class="card" id="results">
+          <h5 class="card-header">Results</h5>
+          <div class="showAmount"></div>
+        </div>
       </div>
-    <div class="showError">
-      <span id="showError"></span>
+      <div class="col-md-5">
+        <div class="card" id="error">
+          <h5 class="card-header">ERROR</h5>
+          <div class="showError"></div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
-  
-
-
 </body>
-
 </html>
