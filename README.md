@@ -1,31 +1,48 @@
-# (Application Name)
+# Currency Exchange
 
-#### (Brief Description of Application)
+#### Calculate the exchange rate between USD, EUR, CAD, RUB, JPY, and MXN
 
-#### By (Your Name Here)
+#### By Kristen Hopper
 
 ## Technologies Used
 
-* _List all_
-* _the major technologies_
-* _you used in your project_
-* _here_
+* _HTML_
+* _CSS_
+* _Bootstrap_
+* _JavaScript_
+* _jQUery_
+* _Node_
+* _Webpack_
+* _API_
 
 ## Description
 
+This program was developed to calculate the exchange rates of different currencies using ExchangeRate-API by AYR Tech (Pty) Ltd.
+
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
+1. Clone the project: `$ git clone https://github.com/krishops/currency-exchange.git`
+2. Within your command line:
+    * Navigate to `currency-exchange/`
+    * Before using the project `touch .env` to create .env file for the project
+    * Run `npm init -y` to prepare for npm install
+    * Run `npm install` to install dependencies
+    * Run `npm run build` to bundle the program for use
+3. Create your own ExchangeRate-API.com API key at https://app.exchangerate-api.com/sign-up and verify your email address
+4. Copy your API key into the .env file `API_KEY=/YOUR-API-KEY/` to properly link the project to the API.
+5. Open `currency-exchange/dist/index.html` to use the program in the browser
+6. To open a development server run `npm run start` in the command line
 
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
+* There are no known bugs in this project.
 
 ## License
 
+[MIT](https://opensource.org/licenses/MIT)
+
+Copyright (c) Kristen Hopper
+
 ## Contact Information
+
+hopperdavis@gmail.com
