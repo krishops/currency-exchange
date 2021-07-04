@@ -11,13 +11,13 @@ function getElements(response) {
   if (response.result === "success") {
     $('.showAmount').text(`${amount} ${code} is ${response.conversion_result} ${target}`);
     
-  } else if (response.result === "error" && response["error-type"] === "unsupported_code")  {
+  } else if (response["error-type"] === "unsupported_code")  {
     $('.showError').text(`${target} is an unsupported currency code, or the currency does not exist.`)
   } 
   
-  else {
-    $('.showError').text(`This is an invalid search: ${response.message}`);
-  }
+  // else {
+  //   $('.showError').text(`This is an invalid search: ${response.message}`);
+  // }
   $('form#currencyEx').trigger("reset");
 }
 
